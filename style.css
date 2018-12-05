@@ -211,13 +211,14 @@ main {
     min-width: 350px;
     min-height: 300px;
     margin: 40px auto;
-    background-color: #fff;
     border-radius: 15px;
+    background-color: #fff;
 }
 
 .modal-header {
     position: relative;
     padding: 10px 20px;
+    text-align: center;
 }
 
 .modal-header h3 {
@@ -238,4 +239,62 @@ main {
 
 .modal-body {
     padding: 20px;
+    border-radius: 15px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 10px 20px 10px;
+}
+
+#modal-cancel,
+#modal-accept {
+    margin-right: 20px;
+}
+
+#modal-cancel {
+    color: #333;
+    background-color: #fff;
+}
+
+#modal-cancel:hover {
+    background-color: #eee;
+}
+
+.post-input-element {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.post-input-element > label {
+    font-weight: 600;
+    flex: 1 75px;
+    margin-right: 10px;
+}
+
+.post-input-element input {
+    flex: 6 200px;
+    padding: 8px;
+    font-size: 20px;
+    border: 1px solid #aaa;
+}
+
+.action-button {
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+    background-color: #000;
+    border: 1px solid #ababab;
+    border-radius: 5px;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.action-button:hover {
+    background-color: #f9d2b2;
+    border-color: #333;
+    color: #333;
 }
