@@ -3,7 +3,7 @@ function insertNewPost(title, imageURL, theme, link) {
   var postCardContext = {
     title: title,
     imageURL: imageURL,
-    theme: theme,
+    theme: theme.toUpperCase(),
     link: link
   };
 
@@ -20,7 +20,7 @@ function handleModalAcceptClick() {
 
   var title = document.getElementById('post-title-input').value.trim();
   var imageURL = document.getElementById('post-image-input').value.trim();
-  var theme = document.getElementById('post-theme-input').value.trim();
+  var theme = document.getElementById('post-theme-input').value.trim().toUpperCase();
   var link = document.getElementById('post-link-input').value.trim();
 
   if (!title || !imageURL || !theme || !link) {
