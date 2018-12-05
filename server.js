@@ -5,11 +5,11 @@ var bodyParser = require('body-parser');
 
 var MongoClient = require('mongodb').MongoClient;
 
-var mongoUser = process.env.MUSER;
-var mongoPassword = process.env.MPASSWORD;
-var mongoPort = process.env.MPORT || 27017;
-var mongoHost = process.env.MHOST || "classmongo.engr.oregonstate.edu";
-var mongoDBName = process.env.MDBNAME || mongoUser;
+var mongoHost = process.env.MONGO_HOST;
+var mongoPort = process.env.MONGO_PORT || 27017;
+var mongoUser = process.env.MONGO_USER;
+var mongoPassword = process.env.MONGO_PASSWORD;
+var mongoDBName = process.env.MONGO_DB_NAME;
 var mongoURL = 'mongodb://' + mongoUser + ':' + mongoPassword + '@' + mongoHost + ':' + mongoPort + '/' + mongoDBName;
 
 var mongoConnection = null;
