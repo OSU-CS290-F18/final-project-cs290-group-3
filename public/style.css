@@ -68,8 +68,8 @@ main {
 }
 
 .post-image-container img {
-    max-height: 262.462px;
-    max-width: 262.462px;
+    height: 262.462px;
+    width: 262.462px;
 }
 
 .post-info-container {
