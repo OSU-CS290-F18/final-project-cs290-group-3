@@ -1,0 +1,28 @@
+{
+  "name": "final-project",
+  "version": "1.0.0",
+  "description": "A simple blog",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "build": "handlebars views/partials/postCard.handlebars -f public/postCardTemplate.js",
+    "prestart": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OSU-CS290-F18/final-project-cs290-group-3.git"
+  },
+  "author": "Ivan Halim, Han Jiang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OSU-CS290-F18/final-project-cs290-group-3/issues"
+  },
+  "homepage": "https://github.com/OSU-CS290-F18/final-project-cs290-group-3#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "handlebars": "^4.0.12",
+    "mongodb": "^3.1.10"
+  }
+}
