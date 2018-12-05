@@ -21,6 +21,7 @@ var port = process.env.PORT || 3000;
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
+app.use(bodyParser.json());
 app.use(express.static('public'));
 
 function renderIndexPage(req, res, next) {
@@ -37,7 +38,19 @@ function renderIndexPage(req, res, next) {
     });
 };
 
-app.get('/', renderIndexPage);
+//app.get('/', renderIndexPage);
+
+
+app.get('/', function (req, res) {
+	console.log("==  home page is shown.")
+	var postdatacollection = mongoConnection.collection('postData');
+	postdatacollection.find({}).toArray(function (err, postData) {
+		res.status(200).render('postPage', {
+			posts: postData
+		});
+	});
+});
+
 app.get('/index.html', renderIndexPage);
 
 app.get('/posts/:n', function(req, res, next) {
