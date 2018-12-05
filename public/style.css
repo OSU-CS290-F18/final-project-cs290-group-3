@@ -88,7 +88,7 @@ main {
     color: #06e;
 }
 
-.posts {
+#posts {
     max-width: 1150px;
     margin: auto;
     font-family: 'montserrat';
