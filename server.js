@@ -5,10 +5,13 @@ var bodyParser = require('body-parser');
 
 var MongoClient = require('mongodb').MongoClient;
 
+var mongoUser = process.env.MUSER;
+var mongoPassword = process.env.MPASSWORD;
+var mongoPort = process.env.MPORT || 27017;
+var mongoHost = process.env.MHOST || "classmongo.engr.oregonstate.edu";
+var mongoDBName = process.env.MDBNAME || mongoUser;
+var mongoURL = 'mongodb://' + mongoUser + ':' + mongoPassword + '@' + mongoHost + ':' + mongoPort + '/' + mongoDBName;
 
-
-
-var mongoURL ='mongodb://cs290_jianghan:cs290_jianghan@classmongo.engr.oregonstate.edu:27017/cs290_jianghan';
 var mongoConnection = null;
 
 
